@@ -29,7 +29,7 @@ a:hover {
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   color:#1ab188;
-  font-size:8px;
+  font-size:12px;
 }
 
 .tab-group {
@@ -193,4 +193,8 @@ textarea {
   padding:10px;
   border-radius: 2px;
 
+}
+
+.help-content{
+  font-weight: bold;
 }
