@@ -18,6 +18,7 @@ var newlist = require('./routes/newlist');
 var newuser_homepage = require('./routes/newuser_homepage');
 var showlist = require('./routes/showlist');
 var visualization = require('./routes/visualization');
+var start_shop = require('./routes/start_shop');
 // Example route
 // var user = require('./routes/user');
 
@@ -54,6 +55,7 @@ app.get('/newuser_homepage', newuser_homepage.view);
 app.get('/newlist', newlist.view);
 app.get('/showlist',showlist.view);
 app.get('/visualization', visualization.view);
+app.get('/start_shop', start_shop.view)
 // Example route
 // app.get('/users', user.list);
 
