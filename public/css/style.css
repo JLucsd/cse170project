@@ -203,3 +203,9 @@ textarea {
   border: 1px black solid;
   height:100px;
 }
+
+#splashscreen{
+  margin-left: 25px;
+   margin-right: 25px;
+  margin-top: 50px;
+}

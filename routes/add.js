@@ -1,16 +1,30 @@
-var data = require("../data.json");
-var newFriend;
+// Get all of our friend data
+var data = require('../store.json');
 
-exports.addFriend = function(req, res) {
+exports.view = function(req, res){
+	//console.log("hello");
 	res.render('add');
+	var title = req.query.title;
+	var date = req.query.month + ","+req.query.date+" 2016";
 
-	var name = req.query.name;
-	var description = req.query.description;
-	 newFriend = {
-		"name": name,
-		"description":description,
-		"imageURL": 'http://lorempixel.com/400/400/people'
+	 newList = {
+	 	"store-id":1,
+		"store-name":"Ralphs",
+		"store-info" : "General store info of Ralphs",
+		"logo" : " ",
+		"user-lists" :{
+			"lists":[
+				{
+						"id": "list3",
+						"title":title,
+						"date": date,
+						}
+						]}
 	};
-	data["friends"].push(newFriend);
+	console.log(newList);
+
+
+	data["stores"].push(newList);
+	console.log(data);
 	
-}
+};
