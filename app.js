@@ -16,10 +16,12 @@ var contact = require('./routes/contact');
 var help = require('./routes/help');
 var homepage = require('./routes/homepage');
 var newlist = require('./routes/newlist');
+var editlist = require('./routes/editlist');
 var newuser_homepage = require('./routes/newuser_homepage');
 var showlist = require('./routes/showlist');
 var visualization = require('./routes/visualization');
 var start_shop = require('./routes/start_shop');
+var shop= require('./routes/shop');
 // Example route
 // var user = require('./routes/user');
 
@@ -55,7 +57,9 @@ app.get('/help', help.view);
 app.get('/homepage', homepage.view);
 app.get('/newuser_homepage', newuser_homepage.view);
 app.get('/newlist', newlist.view);
+app.get('/editlist',editlist.view);
 app.get('/showlist',showlist.view);
+app.get('/shop',shop.view)
 app.get('/visualization', visualization.view);
 app.get('/start_shop', start_shop.view)
 // Example route
