@@ -1,6 +1,8 @@
 // Get all of our friend data
-var data = require('../data.json');
+var data = require('../store.json');
 
 exports.view = function(req, res){
-	res.render('homepage');
+	console.log("hello");
+	res.render('homepage',data);
+	console.log(data);
 };

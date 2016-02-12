@@ -198,3 +198,8 @@ textarea {
 .help-content{
   font-weight: bold;
 }
+
+.store-info{
+  border: 1px black solid;
+  height:100px;
+}
