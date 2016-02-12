@@ -110,6 +110,20 @@
             </div>
         </div>
 
+    <div>
+    <form name="myform" id="addFriendForm" role="form" method="get" action="#">
+        <h3></h3>
+        <div class="form-group">
+          
+          <input type="hidden" class="form-control" id="name" placeholder="Name" name="name">
+        </div>
+        <div class="form-group">
+          
+          <input type="hidden" class="form-control" id="description" placeholder="Description" name="description">
+        </div>
+        
+    </form>
+    </div>
         <script>
     function setTimer(idElement)
     {
@@ -122,11 +136,14 @@
              //console.log("start time=" + )
             // document.getElementById("time").innerHTML = 0;
             element.innerHTML = 'Stop Shopping';
+            document.getElementById("name").value = "Ralps";
         }
         else {
              this.d = new Date;
              console.log("total time= "+ (d.getTime()-this.start)/1000);
              //document.getElementById("time").innerHTML = (d.getTime()-this.start)/1000;
+             document.getElementById("description").value = (d.getTime()-this.start)/1000;
+             document.myform.submit();
              element.innerHTML = 'Start Shopping';
         }
     }
