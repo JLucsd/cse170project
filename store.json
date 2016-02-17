@@ -1,89 +1,45 @@
 {
 	"stores":[
 	{
-		"store-id":1,
+		"store-id":"ralphs",
 		"store-name":"Ralphs",
 		"store-info" : "General store info of Ralphs",
 		"logo" : " ",
-		"user-lists" :{
-			"lists":[
+		"lists":[
 					{
 						"id": "list1",
 						"title": "General Groceries",
 						"date": "January 9, 2016",
-						"category-list":{
-									"fruits":[
-											{"fapp":"Apples"},
-											{"foran":"Oranges"},
-											{"fstraw":"Strawberries"}
-											],
-									"dairy" :[
-											{"2milk":"Milk"},
-											{"yogurt":"Yogurt"},
-											{"cheese":"Cheese"}
-											]}
+						"items":["apples","oranges","Strawberries","milk","yogurt","cheese"]
 					},
 					{
 						"id": "list2",
 						"title": "Medicines",
 						"date": "January 12,2016",
-						"category-list":{
-									"fruits":[
-											{"fapp":"Apples"},
-											{"foran":"Oranges"},
-											{"fstraw":"Strawberries"}
-											],
-									"dairy" :[
-											{"2milk":"Milk"},
-											{"yogurt":"Yogurt"},
-											{"cheese":"Cheese"}
-											]}	
+						"items":["Medicine 1","Medicine 2","Medicine 3","Medicine 4","Medicine 5","Medicine 6"]
 					}
 					]	
-		}
 	},
 
 	{
-		"store-id":2,
+		"store-id":"cvs",
 		"store-name":"CVS",
 		"store-info" : "General store info of CVS",
 		"logo" : " ",
-		"user-lists" :{
-			"lists":[
+		"lists":[
 					{
 						"id": 1,
 						"title": "General Groceries",
 						"date": "January 9, 2016",
-						"category-list":{
-									"fruits":[
-											{"fapp":"Apples"},
-											{"foran":"Oranges"},
-											{"fstraw":"Strawberries"}
-											],
-									"dairy" :[
-											{"2milk":"Milk"},
-											{"yogurt":"Yogurt"},
-											{"cheese":"Cheese"}
-											]}
+						"items":["apples","oranges","Strawberries","milk","yogurt","cheese"]
 					},
 					{
 						"id": 2,
 						"title": "Medicines",
 						"date": "January 12,2016",
-						"category-list":{
-									"fruits":[
-											{"fapp":"Apples"},
-											{"foran":"Oranges"},
-											{"fstraw":"Strawberries"}
-											],
-									"dairy" :[
-											{"2milk":"Milk"},
-											{"yogurt":"Yogurt"},
-											{"cheese":"Cheese"}
-											]}	
+						"items":["apples","oranges","Strawberries","milk","yogurt","cheese"]
 					}
 					]	
 		}
-	}
 	]
 }

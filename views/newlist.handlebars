@@ -107,7 +107,8 @@
                     </select><br/>
                     
                      <h5>Enter Item:</h5>
-                        <input type="text" name="item" style="width:50%" id="item-name"></input><button id="add-item" style="float:right;color:blue" onclick="showInput();"><b>Add</b></button><br/>
+                        <input type="text" name="item" style="width:50%" id="item-name" onfocus="this.value='';"></input>
+                        <button id="add-item" style="float:right;color:blue" onclick="showInput();"><b>Add</b></button><br/>
                    
                     <div id="list-items"></div>
                     <br/><input type="submit" id="submitBtn" class="btn btn-default" value="Create List"></input>
