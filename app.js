@@ -48,8 +48,9 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
-app.get('/splash',splash.view);
+
+app.get('/',splash.view);
+app.get('/index', index.view);
 app.get('/add',add.view);
 app.get('/about', about.view);
 app.get('/contact', contact.view);
