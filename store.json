@@ -1,9 +1,9 @@
 {
 	"stores":[
 	{
-		"store-id":"ralphs",
-		"store-name":"Ralphs",
-		"store-info" : "General store info of Ralphs",
+		"store_id":"ralphs",
+		"store_name":"Ralphs",
+		"store_info" : "General store info of Ralphs",
 		"logo" : " ",
 		"lists":[
 					{
@@ -22,9 +22,9 @@
 	},
 
 	{
-		"store-id":"cvs",
-		"store-name":"CVS",
-		"store-info" : "General store info of CVS",
+		"store_id":"cvs",
+		"store_name":"CVS",
+		"store_info" : "General store info of CVS",
 		"logo" : " ",
 		"lists":[
 					{
