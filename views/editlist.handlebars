@@ -62,9 +62,35 @@
         <div class="row">
             <div class="col-md-3">
                <h4><b> </b></h4>
+               <form action="/homepage">
+                     <h5>Enter Item:</h5>
+                        <input type="text" name="item" style="width:50%" id="item-name" onfocus="this.value='';"></input>
+                        <button id="add-item" style="float:right;color:blue" onclick="showInput();"><b>Add</b></button><br/>
+                        <div id="list-items"></div>
+                    <br/><input type="submit" id="submitBtn" class="btn btn-default" value="Save" onClick="sendVal();"></input>
+                </form>
             </div>
         </div>
     </div>
+
+    <script language="JavaScript">
+        var items = [];
+        function showInput() {
+            var message_entered =  document.getElementById("item-name").value;
+            console.log(message_entered);
+            items.push(message_entered);
+            var required = document.getElementById('list-items');
+            required.innerHTML = required.innerHTML+"<br/>"+ message_entered;
+            document.getElementById('item-name').value = " ";
+            console.log(items);
+        }
+
+        function sendVal()
+        {
+            var field = document.getElementById('item-name');
+            field.value = items;
+        }
+    </script>
 
      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="/js/index.js"></script>

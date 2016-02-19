@@ -13,20 +13,24 @@ exports.view = function(req, res){
 	}
 	res.render('homepage',data);
 	
-
-	var title = req.query.title;
-	var date = req.query.month + ","+req.query.date+" 2016";
-	var items = req.query.item;
-	 newList = {
-				"id": "list"+n,
-				"title":title,
-				"date": date,	
-				"items":items					
-				};
-	console.log(newList);
-	n=n+1;
-	var val = data['stores'];
-	//for(i)
-	var val2 = val[0];
-	val2['lists'].push(newList);
+	console.log(" title= "+req.query.title)
+	if(req.query.title != undefined){
+		var title = req.query.title;
+		var date = req.query.month + ","+req.query.date+" 2016";
+		var items = req.query.item;
+		 newList = {
+					"id": "list"+n,
+					"title":title,
+					"date": date,	
+					"items":items,
+					"store_id":"ralphs"					
+					};
+		
+		n=n+1;
+		var val = data['stores'];
+		//for(i)
+		var val2 = val[0];
+		val2['lists'].push(newList);
+		console.log("new json= " + data);
+		}
 };

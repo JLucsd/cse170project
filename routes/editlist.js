@@ -11,5 +11,21 @@ exports.view = function(req, res){
 	console.log(data);
 	res.render('editlist',data);
 	
+	if(req.query.items != undefined){
+		
+		var items = req.query.item;
+		 newList = {
+					
+					"items":items,
+								
+					};
+		
+		n=n+1;
+		var val = data['stores'];
+		//for(i)
+		var val2 = val[0];
+		val2['lists'].push(newList);
+		console.log("new json= " + data);
+		}
 	
 };
