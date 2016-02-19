@@ -8,7 +8,7 @@ exports.view = function(req, res){
 	if(req.query.description > 0){
 		var newFriend = JSON.parse('{ "name": "' +
 			req.query.name+'", "description": "'+
-			req.query.description+'", "imageURL": "'+'http://lorempixel.com/500/500/people"}');
+			req.query.description+'", "imageURL": "'+'black');
 		time_data["friends"].push(newFriend);
 	}
 	res.render('homepage',data);

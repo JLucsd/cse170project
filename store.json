@@ -2,18 +2,25 @@
 	"stores":[
 	{
 		"store_id":"ralphs",
+<<<<<<< HEAD
+		"store-name":"Ralphs",
+		"store-info" : "General store info of Ralphs",
+=======
 		"store_name":"Ralphs",
 		"store_info" : "General store info of Ralphs",
+>>>>>>> 2b85f0869035f01f9c3be60f95816b460633dca9
 		"logo" : " ",
 		"lists":[
 					{
 						"id": "list1",
+						"store_id":"ralphs",
 						"title": "General Groceries",
 						"date": "January 9, 2016",
 						"items":["apples","oranges","Strawberries","milk","yogurt","cheese"]
 					},
 					{
 						"id": "list2",
+						"store_id":"ralphs",
 						"title": "Medicines",
 						"date": "January 12,2016",
 						"items":["Medicine 1","Medicine 2","Medicine 3","Medicine 4","Medicine 5","Medicine 6"]
@@ -23,18 +30,25 @@
 
 	{
 		"store_id":"cvs",
+<<<<<<< HEAD
+		"store-name":"CVS",
+		"store-info" : "General store info of CVS",
+=======
 		"store_name":"CVS",
 		"store_info" : "General store info of CVS",
+>>>>>>> 2b85f0869035f01f9c3be60f95816b460633dca9
 		"logo" : " ",
 		"lists":[
 					{
 						"id": 1,
+						"store_id":"cvs",
 						"title": "General Groceries",
 						"date": "January 9, 2016",
 						"items":["apples","oranges","Strawberries","milk","yogurt","cheese"]
 					},
 					{
 						"id": 2,
+						"store_id":"cvs",
 						"title": "Medicines",
 						"date": "January 12,2016",
 						"items":["apples","oranges","Strawberries","milk","yogurt","cheese"]

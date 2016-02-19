@@ -1,28 +1,53 @@
 // Get all of our friend data
-var data = require('../data.json');
+'use strict';
 
-exports.view = function(req, res){
-	
-	//var rand = data["friends"];
-	//res.json(rand["name"]);
+/*exports.view = function(req, res){
 	res.render('visualization',data);
-};
+};*/
 
+function drawg(){
+    $.get( "/getjson",test)
+       /*$.each( data, function( key, val ) {
+    //items.push( "<li id='" + key + "'>" + val + "</li>" );
+    console.log(key);
+    console.log(value);
+  });*/
+/*{
+    result = JSON.parse(data);
+    alert(result.name);
+    }
+      );*/
 
-/*
     var time_arr = [4,5,3.6,3];
-    google.charts.load("current", {packages:["corechart"]});
+    
+}
+
+function test (resp)
+{
+  var i;
+  var list=[];
+  var x = new Array(resp.length + 1);
+  for (var i = 0; i < x; i++) {
+  x[i] = new Array(3);
+}
+x[0] = ["Element", "Density", { role: "style" } ];
+  //console.log(resp);  
+  for(i=0;i<resp.length;i++)
+    {var name = resp[i];
+list.push(name["name"]);
+list.push(name["description"]);
+list.push(name["imageURL"]);
+x[i+1]=list;
+  //console.log(x[i]);
+  list=[];
+}
+console.log(x);
+google.charts.load("current", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ["Element", "Density", { role: "style" } ],
-        ["Ralps", desc, "#b87333"],
-        ["Vons", document.getElementById("description").innerHTML, "silver"],
-        ["Costco", 3.5, "gold"],
-        ["Traders Joe", 3, "color: #e5e4e2"]
-      ]);
-
-      var view = new google.visualization.DataView(data);
+      var data = google.visualization.arrayToDataTable(x);
+"Element", "Density", { role: "style" } 
+;      var view = new google.visualization.DataView(data);
       view.setColumns([0, 1,
                        { calc: "stringify",
                          sourceColumn: 1,
@@ -83,4 +108,4 @@ exports.view = function(req, res){
         chart.draw(data, options);
       }
   }
-*/
+}
