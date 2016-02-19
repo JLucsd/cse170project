@@ -16,6 +16,7 @@ var contact = require('./routes/contact');
 var help = require('./routes/help');
 var homepage = require('./routes/homepage');
 var newlist = require('./routes/newlist');
+var editdata = require('./routes/editdata');
 var editlist = require('./routes/editlist');
 var newuser_homepage = require('./routes/newuser_homepage');
 var showlist = require('./routes/showlist');
@@ -61,6 +62,7 @@ app.get('/homepage', homepage.view);
 app.get('/newuser_homepage', newuser_homepage.view);
 app.get('/getjson', getjson.view)
 app.get('/newlist', newlist.view);
+app.get('/editdata',editdata.view);
 app.get('/editlist',editlist.view);
 app.get('/showlist',showlist.view);
 app.get('/shop',shop.view)

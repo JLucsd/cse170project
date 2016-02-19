@@ -1,7 +1,7 @@
 {
 	"stores":[
 	{
-		"store-id":"ralphs",
+		"store_id":"ralphs",
 		"store-name":"Ralphs",
 		"store-info" : "General store info of Ralphs",
 		"logo" : " ",
@@ -22,7 +22,7 @@
 	},
 
 	{
-		"store-id":"cvs",
+		"store_id":"cvs",
 		"store-name":"CVS",
 		"store-info" : "General store info of CVS",
 		"logo" : " ",
