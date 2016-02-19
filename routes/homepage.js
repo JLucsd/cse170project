@@ -2,7 +2,7 @@
 var time_data = require('../data.json');
 var data = require('../store.json');
 var store_id = 0;
-
+var n = 3;
 exports.view = function(req, res){
 
 	if(req.query.description > 0){
@@ -18,13 +18,13 @@ exports.view = function(req, res){
 	var date = req.query.month + ","+req.query.date+" 2016";
 	var items = req.query.item;
 	 newList = {
-				"id": "list3",
+				"id": "list"+n,
 				"title":title,
 				"date": date,	
 				"items":items					
 				};
 	console.log(newList);
-
+	n=n+1;
 	var val = data['stores'];
 	//for(i)
 	var val2 = val[0];
