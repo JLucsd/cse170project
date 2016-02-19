@@ -117,8 +117,11 @@
                                   <option value="neutral">Neutral</option>
                                 </select>
 
-                            <h4>What's your estimated time for shopping?</h4>
-                            <!--add way of inputting time here-->
+                            <h4>By what time do you estimate you would be done with shopping?</h4>
+                            <form action="action_page.php">
+                              Select a time:
+                              <input type="time" name="usr_time">
+                            </form>
                           </div>
                           <div class="modal-footer">
                             <a href=/homepage id="element1" onClick="javascript:setTimer(1)"><button class="button button-block" class="btn btn-default" data-dismiss="modal">Start Timer</button></a>
