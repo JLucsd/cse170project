@@ -35,12 +35,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-
-                        <a href="#" id="element1" onClick="javascript:setTimer(1)">Start Shopping</a>
-
+                        <a href="/start_shop" id="element1" onClick="javascript:setTimer(1)">Start Shopping</a>
                     </li>
                     <li>
-                        <a href="/newuser_homepage">Change Location/Store</a>
+                        <a href="/newuser_homepage">Change Grocery Store</a>
                     </li>
                      <li>
                         <a href="/visualization">My Trends and Statistics</a>
@@ -57,6 +55,7 @@
 
      <div class="container">
             <div class="row">
+<<<<<<< HEAD
                 <div class="col-lg-12">    
                     <h3><b>{{store-name}}</b></h3>
                     <h4> Welcome to {{store-name}}!</h4>
@@ -75,17 +74,96 @@
             </div>
         </div>
     </div>
+=======
+>>>>>>> 2b85f0869035f01f9c3be60f95816b460633dca9
    
-<br/>
- <div class="container">
-            <div class="row">
+                </div>
                 <div class="col-lg-12">
-                     <form action="/newlist" >
-                        <button class="button button-block" style="float:right">Create new list</button>
+                   <a href="#demo" data-toggle="collapse"> <h3><b>{{store-name}}</b></h3></a>
+                    <h4> Welcome to {{store-name}}!</h4>
+                    <div id="demo" class="collapse">
+                         <div class="container">
+                          <div class="store-info">
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <p>{{store-info}}</p>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                     
+                      <br/>
+                    </div>
+
+                    <!-- Trigger the modal with a button -->
+                    <button class="button button-block" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Start Shopping</button>
+
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Let's get the gist of how you're doing.</h4>
+                          </div>
+                          <div class="modal-body" class="form-group">
+                           <h4>Hunger Level</h4>
+                           <p>0 being the least and 5 being the greatest</p>
+                               <select class="form-control" class="col-xs-2">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>                
+                                </select>
+
+                           <h4>Exhaustion Level</h4>
+                           <p>0 being the least and 5 being the greatest</p>
+                               <select class="form-control">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>                
+                                </select>
+
+                           <h4>How are you feeling?</h4>
+                                <select class="form-control">
+                                  <option value="sad">Sad</option>
+                                  <option value="happy">Happy</option>
+                                  <option value="angry">Angry</option>
+                                  <option value="neutral">Neutral</option>
+                                </select>
+
+                            <h4>By what time do you estimate you would be done with shopping?</h4>
+                            <form action="action_page.php">
+                              Select a time:
+                              <input type="time" name="usr_time">
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <a href=/homepage id="element1" onClick="javascript:setTimer(1)"><button class="button button-block" class="btn btn-default" data-dismiss="modal">Start Timer</button></a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <br>
+                    <form action="/newlist" >
+                        <button class="button button-block">Create new list</button>
                     </form>
+                    <br/>
                 </div>
             </div>
     </div>
+     
+    <hr/>
+
     <div class="container">
             <div class="row">
                 <div class="col-lg-12">
