@@ -104,12 +104,12 @@
                     <ul>
                         
                         {{#each lists}}
-                        <form action="">
+                        <form action="\editlist">
                                 
                         <li>
                             <input type="text" style="display:none;" value="{{id}}" name="id">
-                             
-                            <button style="float:right" id="{{id}}" onclick="pass({{id}})">Edit</button>
+                             <input type="text" style="display:none;" value="{{store_id}}" name="store_id"> 
+                            <button style="float:right" id="{{id}}" >Edit</button>
                             <p>{{title}}</p>
                             <p>{{date}}</p>
                         </li>
