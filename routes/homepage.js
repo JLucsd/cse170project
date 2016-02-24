@@ -6,9 +6,10 @@ var n = 3;
 exports.view = function(req, res){
 
 	if(req.query.description > 0){
+		console.log("adsaasdasdasdasdasdasd");
 		var newFriend = JSON.parse('{ "name": "' +
 			req.query.name+'", "description": "'+
-			req.query.description+'", "imageURL": "'+'black');
+			req.query.description+'", "imageURL": "'+'black"}');
 		time_data["friends"].push(newFriend);
 	}
 	res.render('homepage',data);
