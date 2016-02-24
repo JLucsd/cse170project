@@ -13,7 +13,7 @@ exports.view = function(req, res){
 	}
 	res.render('homepage',data);
 	
-	console.log(" title= "+req.query.title)
+	//console.log(" title= "+req.query.title)
 	if(req.query.title != undefined){
 		var title = req.query.title;
 		var date = req.query.month + ","+req.query.date+" 2016";
@@ -31,6 +31,6 @@ exports.view = function(req, res){
 		//for(i)
 		var val2 = val[0];
 		val2['lists'].push(newList);
-		console.log("new json= " + data);
+		console.log("\nnew json= \n" + data);
 		}
 };

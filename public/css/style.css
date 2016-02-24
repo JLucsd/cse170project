@@ -232,3 +232,8 @@ textarea {
   height:15px;
   
 }
+
+#shopping_lists{
+  list-style-type: none;
+  margin-left:-20px;
+}
