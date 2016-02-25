@@ -19,7 +19,14 @@
 
 </head>
    <script src="/js/editlist.js"></script>
-<body> 
+   <script type="text/javascript">
+    function test()
+    {
+        console.log({{store_num}});
+        
+    }
+   </script>
+<body onLoad = test()> 
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -49,7 +56,8 @@
         </div>
     </nav>
 
-{{#with stores.[0]}}
+{{#with store_num}}
+  {{#with stores.[{{store_num}}]}}
 
      <div class="container">
             <div class="row">
@@ -200,6 +208,8 @@
     
 
     {{/with}}
+  {{/with}}
+
 <script>
     function pass(a)
     {

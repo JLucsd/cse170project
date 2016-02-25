@@ -67,7 +67,7 @@ app.get('/showlist',showlist.view);
 app.get('/shop',shop.view)
 app.get('/visualization', visualization.view);
 app.get('/start_shop', start_shop.view)
-app.get('/homepage_after_signup', homepage_after_signup.view);
+app.post('/homepage_after_signup', homepage_after_signup.view);
 // Example route
 
 // app.get('/users', user.list);

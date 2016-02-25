@@ -7,13 +7,14 @@ exports.view = function(req, res){
 	var sid = req.query.store_id;
 	data["sid"] = sid;
 	data["id"] = id;
+	
 	//res.send(id,sid);
 	console.log(data);
 	res.render('editlist',data);
 	
-	if(req.query.items != undefined){
-		
+	if(req.query.items != undefined){		
 		var items = req.query.item;
+		console.log("Items=" + items);
 		 newList = {
 					
 					"items":items,

@@ -12,6 +12,10 @@ exports.view = function(req, res){
 			req.query.description+'", "imageURL": "'+'black"}');
 		time_data["friends"].push(newFriend);
 	}
+	console.log("check store-num before" +data);
+	//var val = data['stores'];
+	data["store_num"] = Number(0);
+	console.log(data);
 	res.render('homepage',data);
 	
 	//console.log(" title= "+req.query.title)
@@ -29,7 +33,6 @@ exports.view = function(req, res){
 		
 		n=n+1;
 		var val = data['stores'];
-		//for(i)
 		var val2 = val[0];
 		val2['lists'].push(newList);
 		console.log("\nnew json= \n" + data);
