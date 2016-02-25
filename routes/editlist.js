@@ -10,6 +10,7 @@ exports.view = function(req, res){
 	
 	//res.send(id,sid);
 	console.log(data);
+	console.log(req.query.items);																										
 	res.render('editlist',data);
 	
 	if(req.query.items != undefined){		
