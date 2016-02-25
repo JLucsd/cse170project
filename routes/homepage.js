@@ -19,11 +19,13 @@ exports.view = function(req, res){
 		var title = req.query.title;
 		var date = req.query.month + ","+req.query.date+" 2016";
 		var items = req.query.item;
+		var it_list = items.split(",");
+		console.log(items);
 		 newList = {
 					"id": "list"+n,
 					"title":title,
 					"date": date,	
-					"items":items,
+					"items":it_list,
 					"store_id":"ralphs"					
 					};
 		

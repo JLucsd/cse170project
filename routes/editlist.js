@@ -9,6 +9,7 @@ exports.view = function(req, res){
 	data["id"] = id;
 	//res.send(id,sid);
 	console.log(data);
+	console.log(req.query.items);																										
 	res.render('editlist',data);
 	
 	if(req.query.items != undefined){
