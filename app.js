@@ -20,9 +20,8 @@ var editdata = require('./routes/editdata');
 var editlist = require('./routes/editlist');
 var newuser_homepage = require('./routes/newuser_homepage');
 var showlist = require('./routes/showlist');
-
+var homepage_after_signup = require('./routes/homepage_after_signup');
 var visualization = require('./routes/visualization');
-
 var start_shop = require('./routes/start_shop');
 var shop= require('./routes/shop');
 // Example route
@@ -68,6 +67,7 @@ app.get('/showlist',showlist.view);
 app.get('/shop',shop.view)
 app.get('/visualization', visualization.view);
 app.get('/start_shop', start_shop.view)
+app.get('/homepage_after_signup', homepage_after_signup.view);
 // Example route
 
 // app.get('/users', user.list);
