@@ -63,11 +63,9 @@
         <div class="row">
             <div class="col-md-3">
                <h4><b> </b></h4>
-               <form name="edit" action="/homepage">
+               <form action="/homepage">
                      <h5>Enter Item:</h5>
                         <input type="text" name="item" style="width:50%" id="item-name" onfocus="this.value='';"></input>
-                        <input type="text" hidden = "true" name="edit_ok" style="width:50%" id="edit_ok" ></input>
-                        <input type="text" hidden = "true" name="list_id" style="width:50%" id="list_id" value = "{{id}}" ></input>
                         <button id="add-item" style="float:right;color:blue" onclick="showInput();"><b>Add</b></button><br/>
                         <div id="list-items"></div>
                     <br/><input type="submit" id="submitBtn" class="btn btn-default" value="Save" onClick="sendVal();"></input>
@@ -78,53 +76,21 @@
 
     <script language="JavaScript">
         var items = [];
-        
         function showInput() {
-            
-            
-            
             var message_entered =  document.getElementById("item-name").value;
             console.log(message_entered);
-            //items.push(message_entered);
-            
-            var ul = document.getElementById("demoedit");
-            var li = document.createElement("li");
-            
-            li.appendChild(document.createTextNode(message_entered));
-            
-            var but = document.createElement('BUTTON');
-            
-            var lis = document.getElementById("demoedit").getElementsByTagName("li");
-            li.setAttribute("id",'item'+(lis.length+1));
-            but.setAttribute("id",lis.length + 1);
-            but.setAttribute("value","del");
-            but.style.cssText = 'float:right';
-            var t = document.createTextNode("delete");       // Create a text node
-            but.appendChild(t);
-            but.style.cssText = 'float:right';
-            li.style.cssText = 'padding-bottom: 15px';
-            li.appendChild(but);
-            ul.appendChild(li);
+            items.push(message_entered);
+            var required = document.getElementById('list-items');
+            required.innerHTML = required.innerHTML+"<br/>"+ message_entered;
             document.getElementById('item-name').value = " ";
-            console.log(items[2]);
+            console.log(items);
         }
 
         function sendVal()
         {
-            console.log("hello");
-            document.getElementById("edit_ok").value=true;
-            var lis = document.getElementById("demoedit").getElementsByTagName("li");
-            
-            for(i=0; i<lis.length; i++){
-                
-                var to_push = lis[i].innerHTML;
-                var res = to_push.split("<");
-                items.push(res[0]);
-            }
             console.log(items);
             var field = document.getElementById('item-name');
             field.value = items;
-            edit.submit();
         }
     </script>
 

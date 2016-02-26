@@ -50,25 +50,20 @@ function makeUL(array) {
         // Create the list item:
         var item = document.createElement('li');
         var id = i;
-        var ch;
+
         // Set its contents:
         item.setAttribute("id",'item'+id);
-
         item.appendChild(document.createTextNode(array[i]));
         
         var but = document.createElement('BUTTON');
         but.setAttribute("id",id);
-        but.style.cssText = '  float:right';
-        item.style.cssText = '  padding-bottom:15px';
         but.setAttribute("value","del");
         var t = document.createTextNode("delete");       // Create a text node
 		but.appendChild(t); 		
         
         // Add it to the list:
-        item.appendChild(but);
         list.appendChild(item);
-        
-        //list.appendChild('br/');
+        list.appendChild(but);
 
     }
 
@@ -78,8 +73,8 @@ function makeUL(array) {
 			console.log(this.id);
 			//parent.removeChild(parent.childNodes[this.id]);
 			var but = document.getElementById(this.id);
-			if(this.value == "del"){but.remove();
-			item.remove();}
+			if(this.value == "del")but.remove();
+			item.remove();
 		});
 
     // Finally, return the constructed list:
