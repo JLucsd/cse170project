@@ -10,10 +10,8 @@ exports.view = function(req, res){
 	
 	//res.send(id,sid);
 	console.log(data);
-	console.log(req.query.items);																										
-	res.render('editlist',data);
-	
-	if(req.query.items != undefined){		
+	console.log(req.query.item);																										
+	/*if(req.query.item != undefined){		
 		var items = req.query.item;
 		console.log("Items=" + items);
 		 newList = {
@@ -28,6 +26,9 @@ exports.view = function(req, res){
 		var val2 = val[0];
 		val2['lists'].push(newList);
 		console.log("new json= " + data);
-		}
+		}*/
+	res.render('editlist',data);
+	
+	
 	
 };
