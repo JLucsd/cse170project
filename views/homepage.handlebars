@@ -22,10 +22,8 @@
    <script type="text/javascript">
     function test()
     {
-        a = {{store_num}};
-        //if(a instanceof Integer)
-        console.log(a);
-        //console.log(#with stores.[0]);
+        console.log({{store_num}});
+        
     }
    </script>
 <body onLoad = test()> 
@@ -57,7 +55,7 @@
             </div>
         </div>
     </nav>
-  
+
   {{#with stores.[0]}}
 
      <div class="container">
@@ -67,7 +65,6 @@
                 <div class="col-lg-12">
                    <a href="#demo" data-toggle="collapse"> <h3><b>{{store_name}}</b></h3></a>
                     <h4> Welcome to {{store_name}}!</h4>
-                   
                     <div id="demo" class="collapse">
                          <div class="container">
                           <div class="store-info">
