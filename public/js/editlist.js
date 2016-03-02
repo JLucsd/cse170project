@@ -10,6 +10,7 @@ function edit()
 
 function test(resp)
 {
+	console.log("Response from editlist\n")
 	console.log(resp);
 	//console.log(b);
 	var i,j;
@@ -58,10 +59,10 @@ function makeUL(array) {
         
         var but = document.createElement('BUTTON');
         but.setAttribute("id",id);
-        but.style.cssText = '  float:right';
-        item.style.cssText = '  padding-bottom:15px';
+        but.style.cssText = ' float:right;color:#1ab188';
+        item.style.cssText = ' padding-bottom:15px';
         but.setAttribute("value","del");
-        var t = document.createTextNode("delete");       // Create a text node
+        var t = document.createTextNode("Delete");       // Create a text node
 		but.appendChild(t); 		
         
         // Add it to the list:
