@@ -87,18 +87,18 @@ google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart2);
       function drawChart2() {
         var data = google.visualization.arrayToDataTable([
-          ['Age', 'Weight'],
-          [ 8,      12],
+          ['Mood', 'Resources Spent'],
+          [ 2.5,      12],
           [ 4,      5.5],
-          [ 10,     14],
+          [ 1,     14],
           [ 4,      5],
           [ 3,      3.5],
-          [ 6.5,    7]
+          [ 1.5,    7]
         ]);
 
         var options = {
           title: 'Mood vs. Time*Money comparison',
-          hAxis: {title: 'Mood', minValue: 0, maxValue: 10},
+          hAxis: {title: 'Mood (0-5) 0:Sad 5:Very Happy', minValue: 0, maxValue: 5},
           vAxis: {title: 'Time*Money', minValue: 0, maxValue: 15},
           legend: 'none'
         };
