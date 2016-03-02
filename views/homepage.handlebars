@@ -173,10 +173,11 @@
     <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                     <h4>Your previous shopping lists at {{store_name}}!</h4>
+                     <h4><b>Previous shopping lists from {{store_name}}:</b></h4></br>
                 </div>
             </div>
     </div>
+
    <form action = "/editlist" id="st_id">
     <input type="text" style="display:none;" value="{{store_id}}" name="store_id">
     <input type="text" style="display:none;"  id="fid" name="id">
@@ -185,20 +186,20 @@
     <div class="container">
             <div class="row">
                 <div class="col-lg-12">      
-                    <ul id="shopping_lists">
-                        
+                    <ul class = "list-group"> 
                         {{#each lists}}
                         <form action="/editlist">
-                                
-                        <li>
+                        <li class="list-saved">
                             <input type="text" style="display:none;" value="{{id}}" name="id">
                              <input type="text" style="display:none;" value="{{store_id}}" name="store_id"> 
 
-                            <button style="float:right" id="{{id}}" >Edit</button>
-                             <a style="float:right;padding-right:20px;" href = "/shop">Map</a>
-                            <p>{{title}}</p>
-                            <p>{{date}}</p>
+                            <button class="button-edit" style="float:right" id="{{id}}"><span class="glyphicon glyphicon-edit">Edit</span></button>
+                            
+                            <button class="button-map" style="float:left"><span class="glyphicon glyphicon-map-marker"><a style="color:#FFFFFF" href="/shop">Map</a></span></button> 
+
+                            <p class="text-center"><b>{{title}}</b><br>{{date}}</p>
                         </li>
+
                         </form>    
                       
                         {{/each}}
