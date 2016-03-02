@@ -28,15 +28,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <a class="navbar-brand" href="/homepage"><img src="/images/navbar_logo.png"></a>
+                 {{#if test}}
+                <a class="navbar-brand" href="/test_homepage"><img src="/images/navbar_logo.png"></a>
+                {{else}}
+                <a class="navbar-brand" href="/homepage"><img src="/images/navbar_logo.png"></a>
+                {{/if}}
             </div>
            
+            {{#if test}}
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="/newuser_homepage">Change Grocery Store</a>
                     </li>
-                     <li>
+                    <li>
+                        <a href="/index">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            {{else}}
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    
+                    <li>
+                        <a href="/newuser_homepage">Change Grocery Store</a>
+                    </li>
+                    <li>
                         <a href="/visualization">My Trends and Statistics</a>
                     </li>
                     <li>
@@ -44,7 +61,8 @@
                     </li>
                 </ul>
             </div>
-        </div>
+            {{/if}}
+        
     </nav>
 
      <div class="container">
@@ -57,8 +75,70 @@
     </div>
 
      <div class="container">
+
         <div class="row">
             <div class="col-md-12">
+                {{#if test}}
+                <form action="/test_homepage">
+                    <h5><b>Call this shopping list as - </b></h5>
+                    <input type="text" name="title" placeholder="Enter name of list"></input><br/>
+                    <h5><b>Today's date is -</b></h5>
+                    <select class="form-control" id = "month" name="month">
+                        <option value = "January"> January </option>
+                        <option value = "February"> February </option>
+                        <option value = "March"> March </option>
+                        <option value = "April"> April </option>
+                        <option value = "May"> May </option>
+                        <option value = "June"> June </option>
+                        <option value = "July"> July </option>
+                        <option value = "August"> August </option>
+                        <option value = "September"> September </option>
+                        <option value = "October"> October </option>
+                        <option value = "November"> November </option>
+                        <option value = "December"> December </option>
+                    </select>
+                     <select class="form-control" id = "date" name="date">
+                        <option value = "1"> 1 </option>
+                        <option value = "2"> 2 </option>
+                        <option value = "3"> 3 </option>
+                        <option value = "4"> 4 </option>
+                        <option value = "5"> 5 </option>
+                        <option value = "6"> 6 </option>
+                        <option value = "7"> 7 </option>
+                        <option value = "8"> 8 </option>
+                        <option value = "9"> 9 </option>
+                        <option value = "10"> 10 </option>
+                        <option value = "11"> 11 </option>
+                        <option value = "12"> 12 </option>
+                        <option value = "13"> 13 </option>
+                        <option value = "14"> 14 </option>
+                        <option value = "15"> 15 </option>
+                        <option value = "16"> 16 </option>
+                        <option value = "17"> 17 </option>
+                        <option value = "18"> 18 </option>
+                        <option value = "19"> 19 </option>
+                        <option value = "20"> 20 </option>
+                        <option value = "21"> 21 </option>
+                        <option value = "22"> 22 </option>
+                        <option value = "23"> 23 </option>
+                        <option value = "24"> 24 </option>
+                        <option value = "25"> 25 </option>
+                        <option value = "26"> 26 </option>
+                        <option value = "27"> 27 </option>
+                        <option value = "28"> 28 </option>
+                        <option value = "29"> 29 </option>
+                        <option value = "30"> 30 </option>
+                    </select><br/>
+                    
+                     <h5><b>Enter all items one by one - </b></h5>
+                    <div class="fieldwrapperform">
+                            <input type="text" name="item" style="width:50%" id="item-name" onfocus="this.value='';" placeholder="Enter item name"></input>
+                            <button id="add-item" style="float:right;color:#1ab188" onclick="showInput();"><b>Add</b></button><br/>
+                        </div>   
+                   <div id="list-items"></div>
+                    <br/><br/><input type="submit" id="submitBtn" class="button button-block" value="Create List" onClick="sendVal();"></input>
+                </form>
+                {{else}}
                 <form action="/homepage">
                     <h5><b>Call this shopping list as - </b></h5>
                     <input type="text" name="title" placeholder="Enter name of list"></input><br/>
@@ -118,6 +198,7 @@
                    <div id="list-items"></div>
                     <br/><br/><input type="submit" id="submitBtn" class="button button-block" value="Create List" onClick="sendVal();"></input>
                 </form>
+                {{/if}}
             </div>
         </div>
     </div>
@@ -164,5 +245,6 @@
     <script src="/js/newlist.js"></script>
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    {{>googleAnalytics}}
 </body>
 </html>

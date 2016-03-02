@@ -58,6 +58,7 @@ app.get('/about', about.view);
 app.get('/contact', contact.view);
 app.get('/help', help.view);
 app.get('/homepage', homepage.view);
+app.get('/test_homepage',homepage.test_view);
 app.get('/newuser_homepage', newuser_homepage.view);
 app.get('/getjson', getjson.view)
 app.get('/newlist', newlist.view);
