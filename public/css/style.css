@@ -17,9 +17,11 @@ a {
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
+
 a:hover {
   color: #179b77;
 }
+
 
 .form {
   background: #4A4A4A;
@@ -132,6 +134,13 @@ textarea {
   border: 2px solid #a0b3b0;
   resize: vertical;
 }
+.list-saved{
+  position: relative;
+  display: block;
+  padding: 5px 5px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
 
 .field-wrap {
   position: relative;
@@ -186,6 +195,37 @@ textarea {
 .button-block {
   display: block;
   width: 100%;
+}
+
+.button-edit {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  background: #3DC2B7;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+
+}
+.button-map {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  background: #44D978;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+
 }
 
 .forgot {
