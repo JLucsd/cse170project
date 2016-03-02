@@ -30,15 +30,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                {{#if test}}
+                <a class="navbar-brand" href="/test_homepage"><img src="/images/navbar_logo.png"></a>
+                {{else}}
                 <a class="navbar-brand" href="/homepage"><img src="/images/navbar_logo.png"></a>
+                {{/if}}
             </div>
            
+            {{#if test}}
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="/newuser_homepage">Change Grocery Store</a>
                     </li>
-                     <li>
+                    <li>
+                        <a href="/index">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            {{else}}
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    
+                    <li>
+                        <a href="/newuser_homepage">Change Grocery Store</a>
+                    </li>
+                    <li>
                         <a href="/visualization">My Trends and Statistics</a>
                     </li>
                     <li>
@@ -46,6 +63,7 @@
                     </li>
                 </ul>
             </div>
+            {{/if}}
         </div>
     </nav>
     
@@ -66,7 +84,7 @@
                
                <h3> <b>My Trends and Statistics</b></h3>
                <div id="graphDiv1"></div>
-    <br />
+    <br/>
     <div id="graphDiv2"></div>
     <!--[if IE]><script src="excanvas.js"></script><![endif]-->
     
@@ -125,6 +143,7 @@
           var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
           chart.draw(data, options);
         }
+
         google.charts.setOnLoadCallback(drawChart2);
         function drawChart2() {
           var data = google.visualization.arrayToDataTable([
@@ -151,9 +170,9 @@
   }
 }
   </script>
-<div id="barchart_values" style="width: 450px; height: 300px;"> </br></br></div>
-           <div id="piechart_3d" style="width: 450px; height: 300px;"></div>
-     <div id="chart_div" style="width: 450px; height: 300px;"></div> 
+              <div id="barchart_values" style="width: 50px; height: 300px;"></div>
+              <div id="piechart_3d" style="width: 350px; height: 300px;"></div>
+              <div id="chart_div" style="width: 350px; height: 300px;"></div> 
             </div>
         </div>
    
@@ -164,6 +183,7 @@
     <script src="/js/index.js"></script>
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    {{>googleAnalytics}}
 </body>
 
 </html>
