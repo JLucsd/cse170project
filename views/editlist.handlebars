@@ -72,11 +72,14 @@
      <div class="container">
         <div class="row">
             <div class="col-md-3">
+               
                <h3 style="color:#1ab188"><b> EDIT LIST</b></h3><br/>
+               
                <h4 id="list_name"></h4>
             <ul id="demoedit">
                 
             </ul>
+            <p id="no_item"></p>
             <br/>
             </div>
         </div>
@@ -111,12 +114,15 @@
                             <button id="add-item" style="float:right;color:#1ab188" onclick="showInput();"><b>Add</b></button><br/>
                         </div>      
                         <input type="text" hidden = "true" name="edit_ok" style="width:50%" id="edit_ok" ></input>
+                        <input type="text" hidden = "true" name="del" style="width:50%" id="del" ></input>    
                         <input type="text" hidden = "true" name="list_id" style="width:50%" id="list_id" value = "{{id}}" ></input>    
                         <div id="list-items"></div>
                         <br/><br/>
                         
-                    <input type="submit" id="submitBtn" class="button button-block" value="Save" onClick="sendVal();"></input>
+                    <input type="submit" id="submitBtn" class="button button-block" value="Save" onClick="sendVal(0);"></input>
+                <input type="submit" class="button-delete" onClick="sendVal(1);" value="DELETE LIST"></input>    
                 </form>
+                
             </div>
             {{/if}}
             
@@ -125,6 +131,7 @@
 
     <script language="JavaScript">
         var items = [];
+        
         
         function showInput() {
             
@@ -156,8 +163,13 @@
             console.log(items[2]);
         }
 
-        function sendVal()
+        function sendVal(i)
         {
+            if(i==1)
+            {
+                console.log("testtestestests");
+                document.getElementById("del").value=1;
+            }
             console.log("hello");
             document.getElementById("edit_ok").value=true;
             var lis = document.getElementById("demoedit").getElementsByTagName("li");

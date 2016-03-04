@@ -212,6 +212,23 @@ textarea {
   -webkit-appearance: none;
 
 }
+.button-delete {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  background: #ff3333;
+  color: #fffffe;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+
+}
 .button-map {
   border: 0;
   outline: none;

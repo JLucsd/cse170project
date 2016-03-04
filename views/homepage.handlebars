@@ -120,13 +120,27 @@
                                 </select>
 
                            <h4>How are you feeling?</h4>
-                                <select class="form-control">
-                                  <option value="sad">Sad</option>
-                                  <option value="happy">Happy</option>
-                                  <option value="angry">Angry</option>
-                                  <option value="neutral">Neutral</option>
+                                <p>0 being sad and 5 being very happy</p>
+                               
+                               <select class="form-control">
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>                
                                 </select>
-
+                                
+                                <h4>Choose list you want use for shopping today</h4>
+                                <select class="form-control">
+                                {{#each lists}}
+                                
+                                  <option value="{{id}}">{{title}}</option>
+                                                  
+                                
+                                
+                                {{/each}}
+                              </select>
                             <h4>By what time do you estimate you would be done with shopping?</h4>
                             <form action="action_page.php">
                               Select a time:
@@ -193,6 +207,7 @@
                             <input type="text" style="display:none;" value="{{id}}" name="id">
                              <input type="text" style="display:none;" value="{{store_id}}" name="store_id"> 
 
+                            
                             <button class="button-edit" style="float:right" id="{{id}}"><span class="glyphicon glyphicon-edit">Edit</span></button>
                             
                             <button class="button-map" style="float:left"><span class="glyphicon glyphicon-map-marker"><a style="color:#FFFFFF" href="/shop">Map</a></span></button> 
@@ -214,6 +229,7 @@
   
 
 <script>
+    
     function pass(a)
     {
         document.getElementById("fid").value = a;

@@ -23,14 +23,23 @@ function test(resp)
 				for(j=0; j<lid.length; j++)
 					{
 						var lt = lid[j];
+						if(lt!=undefined){
 						if(lt["id"] == id)
 						{
 							var nl = lt["items"];
 							console.log("okoko");
 							console.log(nl);
-							var arr = makeUL(nl);
+							if(nl[0] === ""){
+								console.log("inside");
+								no_item();
+							}
+							else{
 							
+								console.log("outside");
+								var arr = makeUL(nl);
+							}
 						}
+					}
 					}
 			}
 	}
@@ -42,6 +51,11 @@ function remove_item(id)
 	//var child = document.getElementById(id);
 	parent.removeChild(parent.childNodes[id]);
 }	
+
+function no_item()
+{
+	document.getElementById("no_item").innerHTML = "Currently, there are no items in the list!!";
+}
 
 function makeUL(array) {
     // Create the list element:

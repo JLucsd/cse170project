@@ -20,8 +20,31 @@ exports.view = function(req, res){
 	//console.log(data);
 	console.log("xxxxxxxxxxxxxxxx");
 	console.log(req.query.item);
-	res.render('homepage',data);
+	
 	console.log(req.query.edit_ok);
+	res.render('homepage',data);
+	if(req.query.del == 1)
+	{
+		var st = data["stores"];
+		var ft = st[0];
+		var lis = ft["lists"];
+
+		for(i=0; i<lis.length; i++)
+		{
+			var sids = lis[i];
+			if(sids!=undefined){
+			if(sids["id"] == req.query.list_id)
+			{
+				console.log("inside delete");
+				console.log(lis[i]);
+				console.log("outsdie delete");
+				delete lis[i];
+				console.log(lis);
+			}
+		}
+		}
+	}
+	
 	if(req.query.edit_ok == undefined)
 	//console.log(" title= "+req.query.title)
 	{
@@ -50,7 +73,9 @@ exports.view = function(req, res){
 	else
 
 	{
+		var j;
 		console.log("ya man!!");
+		var fin=[];
 		var val = data['stores'];
 		var val2= val[0];
 		var val3 = val2['lists'];
@@ -58,8 +83,10 @@ exports.view = function(req, res){
 		{
 			var vall = val3[i];
 			console.log("prnt");
-			console.log(vall['id']);
+			//console.log(vall['id']);
 			console.log(req.query.list_id)
+			if(vall!=undefined){
+			fin.push(vall);
 			if(vall["id"] == req.query.list_id)
 			{
 				console.log("idididid");
@@ -69,9 +96,24 @@ exports.view = function(req, res){
 				vall["items"] = it_list;
 			}
 		}
+			else
+				j=i;		
+		}
 
+		val2['lists']=fin;
+		/*if(j>=0){
+		console.log("humrahe");
+		val3[0]=val3[1];
+		val3[1]=undefined;
+		for(k=j; k<(val3.length)-1;k++)
+		{
+			if(val3[k] == undefined)
+				console.log("shoudlbe");
+			//val3[k]=val3[k+1];
+		}*/
 	}
-};
+	};
+
 
 
 exports.test_view = function(req, res){
