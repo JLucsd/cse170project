@@ -8,17 +8,23 @@
 		"lists":[
 					{
 						"id": "list1",
+						"num_id":"1",
 						"store_id":"ralphs",
 						"title": "General Groceries",
 						"date": "January 9, 2016",
-						"items":["apples","oranges","Strawberries","milk","yogurt","cheese"]
+						"items":["Apples","Oranges","Strawberries","Milk","Yogurt","Cheese"],
+						"ordered_items":["Strawberries", "Oranges", "Apples","Cheese","Yogurt","Milk"],
+						"map":"images/Ralphs_Map.png"
 					},
 					{
 						"id": "list2",
+						"num_id":"2",
 						"store_id":"ralphs",
 						"title": "Medicines",
 						"date": "January 12,2016",
-						"items":["Medicine 1","Medicine 2","Medicine 3","Medicine 4","Medicine 5","Medicine 6"]
+						"items":["Medicine 1","Medicine 2","Medicine 3","Medicine 4","Medicine 5","Medicine 6"],
+						"ordered_items" : ["Medicine 5,Medicine 3,Medicine 1,Medicine 6, Medicine 2,Medicine 4"],
+						"map":"images/Ralphs_Map.png"
 					}
 					]	
 	},

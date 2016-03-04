@@ -27,8 +27,6 @@ exports.view = function(req, res){
 		val2['lists'].push(newList);
 		console.log("new json= " + data);
 		}*/
-	res.render('editlist',data);
-	
-	
+	res.render('editlist',data);	
 	
 };

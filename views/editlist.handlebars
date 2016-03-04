@@ -32,26 +32,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                {{#if test}}
-                <a class="navbar-brand" href="/test_homepage"><img src="/images/navbar_logo.png"></a>
-                {{else}}
+                
                 <a class="navbar-brand" href="/homepage"><img src="/images/navbar_logo.png"></a>
-                {{/if}}
+               
             </div>
            
-            {{#if test}}
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    
-                    <li>
-                        <a href="/newuser_homepage">Change Grocery Store</a>
-                    </li>
-                    <li>
-                        <a href="/index">Logout</a>
-                    </li>
-                </ul>
-            </div>
-            {{else}}
+            
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     
@@ -66,7 +52,7 @@
                     </li>
                 </ul>
             </div>
-            {{/if}}
+           
     </nav>
 
      <div class="container">
@@ -87,24 +73,6 @@
 
      <div class="container">
         <div class="row">
-            {{#if test}}
-                <div class="col-md-3">
-               <h4><b> </b></h4>
-               <form name="edit" action="/test_homepage">
-                     <h5><b>Are there more items that you want to add to this list?</b></h5>
-                        <div class="fieldwrapperform">
-                            <input type="text" name="item" style="width:50%" id="item-name" onfocus="this.value='';" placeholder="Enter item name"></input>
-                            <button id="add-item" style="float:right;color:#1ab188" onclick="showInput();"><b>Add</b></button><br/>
-                        </div>      
-                        <input type="text" hidden = "true" name="edit_ok" style="width:50%" id="edit_ok" ></input>
-                        <input type="text" hidden = "true" name="list_id" style="width:50%" id="list_id" value = "{{id}}" ></input>    
-                        <div id="list-items"></div>
-                        <br/><br/>
-                        
-                    <input type="submit" id="submitBtn" class="button button-block" value="Save" onClick="sendVal();"></input>
-                </form>
-            </div>
-            {{else}}
                 <div class="col-md-3">
                <h4><b> </b></h4>
                <form name="edit" action="/homepage">
@@ -121,11 +89,8 @@
                         
                     <input type="submit" id="submitBtn" class="button button-block" value="Save" onClick="sendVal(0);"></input>
                 <input type="submit" class="button-delete" onClick="sendVal(1);" value="DELETE LIST"></input>    
-                </form>
-                
-            </div>
-            {{/if}}
-            
+                </form>    
+            </div>            
         </div>
     </div>
 
