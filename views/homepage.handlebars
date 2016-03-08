@@ -201,23 +201,25 @@
             <div class="row">
                 <div class="col-lg-12">      
                     <ul class = "list-group"> 
+                        
                         {{#each lists}}
-                        <form action="/editlist" id="form_id">
+                        <form action="/editlist" id="{{id}}">
                         <li class="list-saved">
                             <input type="text" style="display:none;" value="{{id}}" name="id" id="id_of_list">
                              <input type="text" style="display:none;" value="{{store_id}}" name="store_id" id="id_of_store"> 
                             <input type="text" style="display:none;" value="{{num_id}}" name="id_num" id="id_of_list_num">
                             
-                            <button class="button-edit" style="float:right" id="{{id}}"><span class="glyphicon glyphicon-edit">Edit</span></button>
+                            <button class="button-edit" style="float:right" id="but"><span class="glyphicon glyphicon-edit">Edit</span></button>
                             
-                            <button class="button-map" style="float:left" onClick="sendData()"><span class="glyphicon glyphicon-map-marker">Map</span></button> 
+                            <button class="button-map" style="float:left" onClick="sendData({{num_id}})"><span class="glyphicon glyphicon-map-marker">Map</span></button> 
 
                             <p class="text-center"><b>{{title}}</b><br>{{date}}</p>
                         </li>
 
-                        </form>    
-                      
+                            
+                      </form>
                         {{/each}}
+
                     </ul>
 
                 </div>
@@ -230,15 +232,17 @@
 
 <script>
     
-    function sendData()
+    function sendData(a)
     {
+      console.log(a);
       var list_id = document.getElementById("id_of_list_num");
       var store_id = document.getElementById("id_of_store");
-      var id_of_form = document.getElementById("form_id");
-      id_of_form.action="/shop";
+      var sh = document.getElementById('list'+a);
+      sh.action="/shop";
+      
       console.log(list_id.value);
       console.log(store_id.value);
-      id_of_form.submit();
+      sh.submit();
     }
     function pass(a)
     {
@@ -277,7 +281,7 @@
                  this.d = new Date;
                  console.log("total time= "+ (d.getTime()-this.start)/1000);
                  //document.getElementById("time").innerHTML = (d.getTime()-this.start)/1000;
-                 document.getElementById("id").value="ralphs";
+                 document.getElementById("id").value="Ralphs";
                  document.getElementById("desc").value=(d.getTime()-this.start)/1000;
                     document.getElementById("time").submit();
                     element.value = 'Start Shopping';
