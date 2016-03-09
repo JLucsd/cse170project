@@ -24,7 +24,7 @@
 						"title": "Medicines",
 						"date": "January 12,2016",
 						"items":["Medicine 1","Medicine 2","Medicine 3","Medicine 4","Medicine 5","Medicine 6"],
-						"ordered_items" : ["Medicine 5,Medicine 3,Medicine 1,Medicine 6, Medicine 2,Medicine 4"],
+						"ordered_items" : ["Medicine 5","Medicine 3","Medicine 1","Medicine 6", "Medicine 2","Medicine 4"],
 						"map":"images/Ralphs_Map.png"
 					}
 					]	
