@@ -3,7 +3,8 @@
 	{
 		"store_id":"ralphs",
 		"store_name":"Ralphs",
-		"store_info" : "General store info of Ralphs",
+		"store_address" : "8657 Villa La Jolla Drive, La Jolla, CA 92037",
+		"store_phone" : "(858) 597-1550",
 		"logo" : " ",
 		"lists":[
 					{

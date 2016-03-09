@@ -69,11 +69,11 @@ google.charts.load("current", {packages:["corechart"]});
       function drawChart1() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Ralps(Jan 2nd)',     2],
-          ['Ralps(Jan 10th)',      1],
-          ['Vons(Jan 22nd)',  1.5],
-          ['Costco(Feb 7th)', 1.5],
-          ['Ralps(Feb 12th)',    2]
+          ['Ralphs (Jan 2nd)',     2],
+          ['Ralphs (Jan 10th)',      1],
+          ['Vons (Jan 22nd)',  1.5],
+          ['Costco (Feb 7th)', 1.5],
+          ['Ralphs (Feb 12th)',    2]
         ]);
 
         var options = {
